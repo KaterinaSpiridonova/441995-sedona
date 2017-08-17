@@ -1,0 +1,24 @@
+body {
+      font-size: 14px; /*размер шрифта*/
+      line-height: 26px; /*высота строки - не точно*/
+      color: black; /*цвет шрифта - не точно*/
+      font-weight: normal; /*жирность шрифта*/
+      font-family: "PTSans Regular", sans-serif /*гарнитура (название шрифта)*/
+}
+
+.ad-title {
+      font-size: 21px; /*размер шрифта*/
+      line-height: 1.238; /*высота строки*/
+      color: rgb(0, 0, 0); /*цвет шрифта*/
+      font-weight: bold; /*жирность шрифта*/
+      font-family: "PTSans Bold", sans-serif /*гарнитура (название шрифта)*/
+}
+/*
+.blue {
+      font-size: 21px; /*размер шрифта*/
+      line-height: 1; /*высота строки*/
+      color: rgb(255, 255, 255); /*цвет шрифта*/
+      font-weight: bold; /*жирность шрифта*/
+      font-family: "PTSans Bold", sans-serif /*гарнитура (название шрифта)*/
+}
+*/
