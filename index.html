@@ -15,7 +15,7 @@
           <li><a href=#>Информация</a></li>
           <li><a href=#>Фото и видео</a></li>
           <li><a href=#>Карта штата</a></li>
-          <li><a href=#>Гостиницы</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -94,28 +94,43 @@
       <section class="Search">
         <h2>Заинтересовались?</h2>
         <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
-        <a class="search-button">Поиск гостиницы в Седоне</a>
+        <a class="search-button" href=#>Поиск гостиницы в Седоне</a>
         <form action="https://echo.htmlacademy.ru" method="post">
-            Дата заезда:
-          <input type="text" name="date-arrival">
-          <button class="button" type="submit"></button>
-            Дата выезда:
-          <input type="text" name="date-departure">
-          <button class="button" type="submit"></button>
-            Взрослые:
-          <button class="button" type="submit">-</button>
-          <input type="text" name="0">
-          <button class="button" type="submit">+</button>
-            Дети:
-          <button class="button" type="submit">-</button>
-          <input type="text" name="2">
-          <button class="button" type="submit">+</button>
-          <input type="submit" value="Найти">
+          <p>
+            <label for="user-date-arrival">Дата заезда:</label>
+            <input type="text" name="date-arrival" placeholder="24 апреля 2017" id="user-date-arrival">
+            <button class="calendar" type="button">Календарь</button>
+          </p>
+          <p>
+            <label for="user-date-departure">Дата выезда:</label>
+            <input type="text" name="date-departure" placeholder="4 июля 2017" id="user-date-departure">
+            <button class="calendar" type="button">Календарь</button>
+          </p>
+
+          <p>
+            <label for="quantity-adults">Взрослые:</label>
+            <button class="button-quantity" type="button">Меньше</button>
+            <input type="text" name="quantity" placeholder="2" id="quantity-adults">
+            <button class="button-quantity" type="button">Больше</button>
+
+            <label for="quantity-children">Дети:</label>
+            <button class="button-quantity" type="button">Меньше</button>
+            <input type="text" name="quantity" placeholder="0" id="quantity-children">
+            <button class="button-quantity" type="button">Больше</button>
+          </p>
+
+          <button class="button" type="submit">Найти</button>
+
         </form>
       </section>
-      <div class="map">
 
-      </div>
+      <section class="map">
+        <h2 class="visually-hidden">Седона на карте</h2>
+        <p>
+          <img src="img/map.jpg" width="1280" height="747" alt="Координаты Седона 34°52′11″ с.ш., 111°45′39″ з.д.">
+        </p>
+      </section>
+
     </main>
     <footer class="main-footer">
       <p>

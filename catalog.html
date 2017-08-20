@@ -12,10 +12,10 @@
           <img src="img/logo.png" width="140 height="70" alt="Логотип «Седона»">
         </a>
         <ul class="site-navigation">
-          <li><a href=#>Информация</a></li>
+          <li><a href="index.html">Информация</a></li>
           <li><a href=#>Фото и видео</a></li>
           <li><a href=#>Карта штата</a></li>
-          <li><a href=#>Гостиницы</a></li>
+          <li><a>Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -24,46 +24,50 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр отелей</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="filters-list">
+          <fieldset class="filters-list"> <!--убрать класс?-->
               <legend>Инфраструктура:</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" name="pool" checked>
-                  БАССЕЙН
+                  <input class="visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
+                  <label for="filter-pool">БАССЕЙН</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" name="parking">
-                  ПАРКОВКА
+                  <input class="visually-hidden" type="checkbox" name="parking" id="filter-parking">
+                  <label for="filter-parking">ПАРКОВКА</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" name="wifi">
-                  WI-FI
+                  <input class="visually-hidden" type="checkbox" name="wifi" id="wifi">
+                  <label for="wifi">WI-FI</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filters-list">
+
+            <fieldset class="filters-list"> <!--убрать класс?-->
               <legend>Тип жилья:</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" name="hotel" checked>
-                  ГОСТИНИЦА
+                  <input class="visually-hidden" type="checkbox" name="hotel" id="hotel" checked>
+                  <label for="hotel">ГОСТИНИЦА</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" name="motel" checked>
-                  МОТЕЛЬ
+                  <input class="visually-hidden" type="checkbox" name="motel" id="motel" checked>
+                  <label for="motel">МОТЕЛЬ</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" name="apartments" checked>
-                  АПАРТАМЕНТЫ
+                  <input class="visually-hidden" type="checkbox" name="apartments" id="apartments" checked>
+                  <label for="apartments">АПАРТАМЕНТЫ</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Стоимость в сутки (р):</legend>
-            </fieldset>
+
+            <label>
+              <input type="range" name="radio"> Стоимость в сутки (р):
+            </label>
+
             <button type="submit" class="filter-button button">Показать</button>
         </form>
     </section>
+
     <section class="result">
       <h2 class="result-title">НАЙДЕНО: 3</h2>
         <h3>Сортировка:</h3>
@@ -73,13 +77,13 @@
             <li><a href="#">По рейтингу</a></li>
           </ul>
     </section>
+
     <section class="hotel-directory">
       <h2 class="visually-hidden">Результат поиска отелей </h2>
     <article class="hotel">
       <div class="hotel-info">
-        <h3 class="hotel-name">
-          <a href="#">Amara Resort & spa</a>
-        </h3>
+        <h3 class="hotel-name">Amara Resort & spa</h3>
+          <!--<a href="#">Amara Resort & spa</a>-->
         <p>
           <span class="housing-type">Гостиница</span>
           <a class="button-detailed-hotel" href="#">Подробнее</a>
@@ -98,9 +102,8 @@
     </article>
     <article class="hotel">
       <div class="hotel-info">
-        <h3 class="hotel-name">
-          <a href="#">Desert quail inn</a>
-        </h3>
+        <h3 class="hotel-name">Desert quail inn</h3>
+          <!--<a href="#">Desert quail inn</a>-->
         <p>
           <span class="housing-type">Мотель</span>
           <a class="button-detailed-hotel" href="#">Подробнее</a>
@@ -119,9 +122,8 @@
     </article>
     <article class="hotel">
       <div class="hotel-info">
-        <h3 class="hotel-name">
-          <a href="#">Villas at poco diablo</a>
-        </h3>
+        <h3 class="hotel-name">Villas at poco diablo</h3>
+          <!--<a href="#">Villas at poco diablo</a>-->
         <p>
           <span class="housing-type">Аппартаменты</span>
           <a class="button-detailed-hotel" href="#">Подробнее</a>
