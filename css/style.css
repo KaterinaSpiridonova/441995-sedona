@@ -1,27 +1,222 @@
 body {
-      font-size: 14px; /*размер шрифта*/
-      line-height: 26px; /*высота строки - не точно*/
-      color: black; /*цвет шрифта - уточнить*/
-      font-weight: normal; /*жирность шрифта*/
-      font-family: "PTSans", sans-serif /*гарнитура (название шрифта)*/
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif; /*гарнитура (название шрифта)*/
+  font-size: 14px; /*размер шрифта*/
+  line-height: 26px; /*высота строки 1.238*/
+  font-weight: normal; /*жирность шрифта*/
+  color: rgb(51, 51, 51); /*цвет шрифта*/
+  text-transform: uppercase;
+
+  background-color: rgb(255, 255, 255);
 }
 
-.ad-title {
-      font-size: 21px; /*размер шрифта*/
-      color: rgb(0, 0, 0); /*цвет шрифта*/
-      font-weight: bold; /*жирность шрифта*/
+a {
+  text-decoration: none;
 }
 
-/*.blue {
-      font-size: 21px; /*размер шрифта*/
-      line-height: 1; /*высота строки*/
-      color: rgb(255, 255, 255); /*цвет шрифта*/
-      font-weight: bold; /*жирность шрифта*/
-      font-family: "PTSans", sans-serif /*гарнитура (название шрифта)*/
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px; /*1.857*/
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
+  background-color: rgb(255, 255, 255);
 }
-*/
-/*
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: rgb(51, 51, 51);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: rgb(129, 179, 210);
+}
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.302);
+}
+
+
+/*блок промо*/
 .promo {
-    background-image: url("promo-background.jpg");
+  background-color: rgb(105, 135, 165);
+  background-image: url("img/promo-background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/*блок вступление*/
+.ad {
+  text-align: center;
+}
+
+.ad h2{
+  font-size: 21px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+/*блок причины №1, 2*/
+.background-blue {
+  background-color: rgb(129, 179, 210);
+  text-align: center;
+}
+.background-blue h3 {
+  font-size: 21px;
+  line-height: 21px; /*1*/
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.background-blue span,
+.background-blue p {
+  color: rgb(255, 255, 255);
+}
+
+/*блок жилье еда сувениры*/
+.reason-list {
+  list-style: none;
+}
+
+.reason-item {
+  text-align: center;
+}
+
+.reason-item h3 {
+  font-size: 21px;
+  line-height: 21px; /*1*/
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+/*блок причины 3, 4, 5*/
+.background-gray {
+  background-color: rgb(238, 238, 238);
+}
+
+/*блок поиск*/
+.search {
+  text-align: center;
+}
+.search h2 {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+}
+.search a {
+  font-size: 21px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  vertical-align: middle;
+
+  background-color: rgb(118, 99, 87);
+  border: none;
+}
+.search a:hover {
+  background-color: rgb(96, 78, 67);
+}
+.search a:active {
+  background-color: rgb(80, 62, 51);
+}
+
+.search label{
+  color: rgb(0, 0, 0);
+  line-height: 1.857;
+  font-weight: bold;
+}
+
+input[placeholder],
+.calendar {
+  color: rgb(0, 0, 0);
+  line-height: 1.857;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  background-color: rgb(242, 242, 242);
+  border: none;
+}
+input[placeholder] a:hover{
+  background-color: rgb(235, 235, 235);
+}
+input[placeholder] a:focus{
+  background-color: rgb(255, 255, 255);
+  border-color: 1px solid rgb(229, 229, 229);
+}
+
+.button {
+  font-size: 21px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  vertical-align: middle;
+
+  background-color: rgb(129, 179, 210);
+  border: none;
+}
+
+/*подвал*/
+.main-footer {
+  color: rgb(0, 0, 0);
+}
+
+.hashtag {
+  color: rgb(0, 0, 0);
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: rgb(255, 255, 255);
+}
+
+.footer-copyright {
+  text-align: center;
+}
+.footer-copyright a {
+  color: rgb(0, 0, 0);
+}
+
+
+/*стр. каталог блок фильтры
+.filters {
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(105, 135, 165);
+  background-image: url("img/filter background.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.filter fieldset {
+  border: none;
+}
+.filter legend {
+  font-size: 16px;
+  line-height: 1.313;
+  font-weight: bold;
+}
+.filter ul {
+  list-style: none;
+  line-height: 1.5;
+}
+.filter-input:disabled + label {
+  color: rgb(0, 0, 0);
+
+  opacity: 0.5;
+}
+
+.filter-button button {
+  background-color: rgb(105, 135, 165);
 }
 */
