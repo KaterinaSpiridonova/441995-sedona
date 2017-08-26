@@ -32,22 +32,22 @@ a {
 .site-navigation a {
   color: rgb(51, 51, 51);
 }
-
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:hover {
   color: rgb(129, 179, 210);
 }
 .site-navigation a:active {
   color: rgba(0, 0, 0, 0.302);
 }
 
-
 /*блок промо*/
 .promo {
   background-color: rgb(105, 135, 165);
-  background-image: url("img/promo-background.jpg");
+  background-image: url("../img/promo-background.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /*блок вступление*/
@@ -121,6 +121,7 @@ a {
   background-color: rgb(96, 78, 67);
 }
 .search a:active {
+  color: rgba(255, 255, 255, 0.302);
   background-color: rgb(80, 62, 51);
 }
 
@@ -130,8 +131,7 @@ a {
   font-weight: bold;
 }
 
-input[placeholder],
-.calendar {
+.search-data input[type="text"] {
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
@@ -140,12 +140,24 @@ input[placeholder],
   background-color: rgb(242, 242, 242);
   border: none;
 }
-input[placeholder] :hover{
+.search-data input[type="text"]:hover{
   background-color: rgb(235, 235, 235);
 }
-input[placeholder] :focus{
-  background-color: rgb(255, 255, 255);
-  border-color: 1px solid rgb(229, 229, 229);
+.search-data input[type="text"]:focus{
+  background-color: transparent;
+  border: 2px solid rgb(229, 229, 229);
+  outline: none;
+}
+
+.search-people-number input[type="text"] {
+  color: rgb(0, 0, 0);
+  line-height: 1.857;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  background-color: rgb(242, 242, 242);
+  border: none;
+  outline: none;
 }
 
 .button {
@@ -153,17 +165,18 @@ input[placeholder] :focus{
   color: rgb(255, 255, 255);
   font-weight: bold;
   vertical-align: middle;
+  line-height: 1.2;
 
   background-color: rgb(129, 179, 210);
   border: none;
 }
-.button :hover{
+.button:hover{
   background-color: rgb(102, 158, 192);
 }
-.button :hover{
+.button:active{
+  color: rgba(255, 255, 255, 0.302);
   background-color: rgb(84, 150, 189);
 }
-
 
 /*подвал*/
 .main-footer {
@@ -196,34 +209,144 @@ input[placeholder] :focus{
 }
 
 
-/*стр. каталог блок фильтры
+/*стр. каталог блок фильтры*/
+.site-navigation-active a {
+  color: rgb(118, 99, 87);
+}
+
+.site-navigation-active a:hover,
+.site-navigation-active a:focus,
+.site-navigation-active a:active {
+  color: rgb(118, 99, 87);
+}
+
 .filters {
   color: rgb(255, 255, 255);
 
   background-color: rgb(105, 135, 165);
-  background-image: url("img/filter background.jpg");
+  background-image: url("../img/filters-background.jpg");
   background-position: 0 0;
   background-repeat: repeat;
 }
+
 .filter fieldset {
   border: none;
 }
+
 .filter legend {
   font-size: 16px;
   line-height: 1.313;
   font-weight: bold;
 }
+
 .filter ul {
   list-style: none;
+  line-height: 21px;
+}
+
+.filter-button {
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  background-color: transparent;
+  border: 2px solid rgb(229, 229, 229);
+  text-transform: uppercase;
+  outline: none;
+}
+.filter-button:hover {
+  color: rgb(0, 0, 0);
+  background-color:rgb(255, 255, 255);
+}
+
+.price-controls input[type="text"] {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+}
+.price-controls {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.result h2 {
+  font-size: 21px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.result h3 {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
   line-height: 1.5;
 }
-.filter-input:disabled + label {
+
+.sorting {
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sorting-price {
+  color: rgb(129, 179, 210);
+}
+.sorting-type-rating {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.302);
+  border-bottom: 0.8px dashed rgb(129, 179, 210);
+}
+.sorting-type-rating:hover {
+  text-decoration: none;
+  color: rgb(129, 179, 210);
+  border-bottom: 0.8px dashed rgb(129, 179, 210);
+}
+.sorting-type-rating:active {
   color: rgb(0, 0, 0);
+  border-bottom: none;
+}
+.button-detailed-hotel {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.5;
+  vertical-align: middle;
 
-  opacity: 0.5;
+  background-color: rgb(129, 179, 210);
+  border: none;
+}
+.button-detailed-hotel:hover{
+  background-color: rgb(102, 158, 192);
+}
+.button-detailed-hotel:active{
+  color: rgba(255, 255, 255, 0.302);
+  background-color: rgb(84, 150, 189);
 }
 
-.filter-button button {
-  background-color: rgb(105, 135, 165);
+.button-booking-hotel {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.5;
+  vertical-align: middle;
+
+  background-color: rgb(118, 99, 87);
+  border: none;
 }
-*/
+.button-booking-hotel:hover {
+  background-color: rgb(96, 78, 67);
+}
+.button-booking-hotel:active {
+  color: rgba(255, 255, 255, 0.302);
+  background-color: rgb(80, 62, 51);
+}
+.housing-type,
+.housing-cost {
+  line-height: 1.5;
+}
+.hotel-name a {
+  font-size: 21px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.hotel-name a:hover{
+  color: rgb(129, 179, 210);
+}
+.hotel-name a:active {
+  color: rgba(0, 0, 0, 0.302);
+}
+.rating-points {
+  background-color: rgb(242, 242, 242);
+}

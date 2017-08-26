@@ -17,7 +17,7 @@
           <li><a href=#>Информация</a></li>
           <li><a href=#>Фото и видео</a></li>
           <li><a href=#>Карта штата</a></li>
-          <li><a>Гостиницы</a></li>
+          <li class="site-navigation-active"><a>Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -62,13 +62,18 @@
               </ul>
             </fieldset>
 
-            <div class="">
-              <label for="dailycost">Стоимость в сутки (р):</label>
-              От 0 До 3000
-              <input type="range" id="dailycost" name="dailycost" min="0" max="3000" step="1">
+            <div class="range-filter">
+              <p>Стоимость в сутки (р):</p>
+              <div class="price-controls">
+                <label for="min-price">от</label>
+                <input class="min-price" type="text" id="min-price" value="0">
+                <label for="max-price">до</label>
+                <input class="max-price" type="text" id="max-price" value="3000">
+              </div>
+
             </div>
 
-            <button type="submit" class="filter-button button">Показать</button>
+            <button type="submit" class="filter-button">Показать</button>
         </form>
     </section>
 
@@ -76,9 +81,9 @@
       <h2 class="result-title">НАЙДЕНО: 3</h2>
         <h3>Сортировка:</h3>
           <ul class="sorting">
-            <li><a href="#">По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a href="#">По рейтингу</a></li>
+            <li><a class="sorting-price" href="#">По цене</a></li>
+            <li><a class="sorting-type-rating" href="#">По типу</a></li>
+            <li><a class="sorting-type-rating" href="#">По рейтингу</a></li>
           </ul>
     </section>
 
@@ -86,8 +91,9 @@
       <h2 class="visually-hidden">Результат поиска отелей </h2>
     <article class="hotel">
       <div class="hotel-info">
-        <h3 class="hotel-name">Amara Resort & spa</h3>
-          <!--<a href="#">Amara Resort & spa</a>-->
+        <h3 class="hotel-name">
+          <a href="#">Amara Resort & spa</a>
+        </h3>
         <p>
           <span class="housing-type">Гостиница</span>
           <a class="button-detailed-hotel" href="#">Подробнее</a>
@@ -106,8 +112,9 @@
     </article>
     <article class="hotel">
       <div class="hotel-info">
-        <h3 class="hotel-name">Desert quail inn</h3>
-          <!--<a href="#">Desert quail inn</a>-->
+        <h3 class="hotel-name">
+          <a href="#">Desert quail inn</a>
+        </h3>
         <p>
           <span class="housing-type">Мотель</span>
           <a class="button-detailed-hotel" href="#">Подробнее</a>
@@ -126,8 +133,9 @@
     </article>
     <article class="hotel">
       <div class="hotel-info">
-        <h3 class="hotel-name">Villas at poco diablo</h3>
-          <!--<a href="#">Villas at poco diablo</a>-->
+        <h3 class="hotel-name">
+          <a href="#">Villas at poco diablo</a>
+        </h3>
         <p>
           <span class="housing-type">Аппартаменты</span>
           <a class="button-detailed-hotel" href="#">Подробнее</a>
