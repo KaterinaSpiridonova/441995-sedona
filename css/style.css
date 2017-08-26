@@ -140,10 +140,10 @@ input[placeholder],
   background-color: rgb(242, 242, 242);
   border: none;
 }
-input[placeholder] a:hover{
+input[placeholder] :hover{
   background-color: rgb(235, 235, 235);
 }
-input[placeholder] a:focus{
+input[placeholder] :focus{
   background-color: rgb(255, 255, 255);
   border-color: 1px solid rgb(229, 229, 229);
 }
@@ -157,6 +157,13 @@ input[placeholder] a:focus{
   background-color: rgb(129, 179, 210);
   border: none;
 }
+.button :hover{
+  background-color: rgb(102, 158, 192);
+}
+.button :hover{
+  background-color: rgb(84, 150, 189);
+}
+
 
 /*подвал*/
 .main-footer {
