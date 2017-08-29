@@ -46,19 +46,32 @@ a {
   background-position: top center;
   background-repeat: no-repeat;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 134px;
+  padding-bottom: 81px;
 }
+
 
 /*блок вступление*/
 .ad {
   text-align: center;
+  height: 216px;
 }
 
 .ad h2{
   font-size: 21px;
   font-weight: bold;
   color: rgb(0, 0, 0);
+
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 34px;
+  margin-left: auto;
+
+  padding: 60px 380px 38px 380px;
+  position: relative;
+}
+.ad p {
+  margin: -35px;
 }
 
 /*блок причины №1, 2*/
@@ -77,6 +90,39 @@ a {
   color: rgb(255, 255, 255);
 }
 
+/*сетка*/
+
+.background-blue {
+  width: 400px;
+  margin: 0px;
+  padding: 47px 59px 63px 60px;
+
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+.background-blue h3 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.background-blue p {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.reason-image {
+  width: 800px;
+  height: 256px;
+
+}
+.reason-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /*блок жилье еда сувениры*/
 .reason-list {
   list-style: none;
@@ -92,6 +138,30 @@ a {
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
+
+.reason-1-wrapper {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 0;
+padding: 0;
+
+list-style: none;
+
+
+}
+.reason-item {
+  width: 400px;
+
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+
+}
+
+
+
+
+
 
 /*блок причины 3, 4, 5*/
 .background-gray {
@@ -183,7 +253,7 @@ a {
   color: rgb(0, 0, 0);
 }
 
-.hashtag {
+.hashtag a{
   color: rgb(0, 0, 0);
   font-size: 21px;
   font-weight: bold;
@@ -350,3 +420,97 @@ a {
 .rating-points {
   background-color: rgb(242, 242, 242);
 }
+
+/* ----- Сеточные стили ----- */
+html,
+body {
+  min-width: 1280px;
+  min-height: 2762px;
+}
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main-header {
+  margin-bottom: 70px; /* уточнить */
+}
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.main-header-logo {
+  order: -1;
+  width: 138px;
+  height: 70px;
+}
+
+.site-navigation {
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/*
+.main-navigation {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+ /* Временно для сетки
+ min-height: 70px;
+ background-color: transparent;
+}
+
+*/
+
+/* ----- подвал -----
+.map {
+  /* временно для сетки
+  background-color:#ef5ea6;
+}
+.main-footer {
+  padding: 35px 0;
+  /* временно для сетки
+  background-color:#cd7de8;
+  min-height: 120px;
+}
+.main-footer .container {
+  display: flex;
+}
+.hashtag {
+  margin: 0;
+  width: 155px;
+  margin-right: 255px;
+
+/* Временно для сетки
+min-height: 70px;
+}
+
+.footer-social {
+  margin: 0;
+  width: 165px;
+
+/* Временно для сетки
+background-color:#cd7de8;
+min-height: 70px;
+}
+
+.footer-copyright {
+  width: 200px;
+  margin: 0;
+  margin-left: auto;
+
+/* Временно для сетки
+background-color:#cd7de8;
+min-height: 70px;
+}
+*/
