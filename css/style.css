@@ -1,15 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
 
   font-family: "PT Sans", Arial, sans-serif; /*гарнитура (название шрифта)*/
-  font-size: 14px; /*размер шрифта*/
-  line-height: 26px; /*высота строки 1.238*/
-  font-weight: normal; /*жирность шрифта*/
-  color: rgb(51, 51, 51); /*цвет шрифта*/
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: rgb(51, 51, 51);
   text-transform: uppercase;
 
   background-color: rgb(255, 255, 255);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
@@ -75,18 +106,22 @@ a {
 }
 
 /*блок причины №1, 2*/
-.background-blue {
+.background-blue,
+.background-blue-2 {
   background-color: rgb(129, 179, 210);
   text-align: center;
 }
-.background-blue h3 {
+.background-blue h3,
+.background-blue-2 h3{
   font-size: 21px;
   line-height: 26px; /*1*/
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
 .background-blue span,
-.background-blue p {
+.background-blue-2 span,
+.background-blue p,
+.background-blue-2 p {
   color: rgb(255, 255, 255);
 }
 
@@ -97,18 +132,21 @@ a {
   margin: 0px;
   padding: 45px 59px 65px 59px;
 }
-
+.background-blue-2 {
+  width: 400px;
+  margin: 0px;
+  padding: 49px 49px 65px 49px;
+}
 .background-blue h3 {
   margin: 0 auto;
-  /*width: 123px;
-  height: 44px;
-padding: 0px 80px 27px 80px;*/
+  padding: 0px 80px 20px 80px;
 }
-
+.background-blue-2 h3{
+  margin: 0 auto;
+  padding: 0px 75px 20px 75px;
+}
 .background-blue p {
-  margin: 0;
   margin-bottom: 25px;
-  padding: 0;
 }
 
 .reason-image-town {
@@ -123,35 +161,16 @@ padding: 0px 80px 27px 80px;*/
   width: 800px;
   height: 257px;
   background-position: 50% 55%;
+  order: -1;
 }
 
-
-.reason-1 {
+.reason {
   display: flex;
   height: 257px;
   flex-direction: row;
-
-
 }
-
-
 
 /*блок жилье еда сувениры*/
-.reason-list {
-  list-style: none;
-}
-
-.reason-item {
-  text-align: center;
-}
-
-.reason-item h3 {
-  font-size: 21px;
-  line-height: 21px; /*1*/
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-}
-
 .reason-list {
 display: flex;
 flex-direction: row;
@@ -159,21 +178,52 @@ margin: 0;
 padding: 0;
 
 list-style: none;
-
+}
+.reason-list h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
 
 }
-.reason-item {
+.reason-list li {
+  text-align: center;
+
   width: 400px;
-
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
-
+  height:331px;
+  margin: 0px;
 }
-
-
-
-
-
+.reason-item-1 {
+  padding: 59px 74px 88px 74px;
+}
+.reason-item-2 {
+  padding: 61px 58px 88px 55px;
+}
+.reason-item-3 {
+  padding: 56px 60px 88px 60px;
+}
+.reason-item-4 {
+  padding: 48px 96px 63px 96px;
+}
+.reason-item-5 {
+  padding: 48px 68px 88px 68px;
+}
+.reason-item-1 h3,
+.reason-item-2 h3,
+.reason-item-3 h3 {
+  padding-top: 20px;
+}
+.reason-item-4 h3 {
+  padding-bottom: 20px;
+}
+.reason-item-5 h3,
+.reason-item-6 h3  {
+  padding: 0px 83px 20px 83px;
+}
+.reason-item-6 {
+  padding: 48px 70px 88px 70px;
+}
 
 /*блок причины 3, 4, 5*/
 .background-gray {
@@ -189,7 +239,10 @@ list-style: none;
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 1.2;
+  margin-top: 55;
+  margin-bottom: 30px;
 }
+
 .search a {
   font-size: 21px;
   color: rgb(255, 255, 255);
@@ -198,6 +251,8 @@ list-style: none;
 
   background-color: rgb(118, 99, 87);
   border: none;
+  padding: 30px 135px 30px 135px;
+
 }
 .search a:hover {
   background-color: rgb(96, 78, 67);
@@ -206,11 +261,14 @@ list-style: none;
   color: rgba(255, 255, 255, 0.302);
   background-color: rgb(80, 62, 51);
 }
-
+.search-manual {
+  margin-bottom: 50px;
+}
 .search label{
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
+  padding-right: 20px;
 }
 
 .search-data input[type="text"] {
@@ -221,6 +279,14 @@ list-style: none;
 
   background-color: rgb(242, 242, 242);
   border: none;
+
+  box-sizing: border-box;
+  width: 347px;
+  padding: 14px 215px 14px 12px;
+
+  background-image: url("../img/calendar.svg");
+  background-position: 316px center;
+  background-repeat: no-repeat;
 }
 .search-data input[type="text"]:hover{
   background-color: rgb(235, 235, 235);
@@ -231,7 +297,8 @@ list-style: none;
   outline: none;
 }
 
-.search-people-number input[type="text"] {
+.search-people-number input[type="text"],
+.quantity-children input[type="text"] {
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
@@ -240,6 +307,20 @@ list-style: none;
   background-color: rgb(242, 242, 242);
   border: none;
   outline: none;
+
+  width: 38px;
+  text-align: center;
+  padding: 14px 15px 14px 15px;
+  /*padding: 14px 25px 14px 25px;*/
+  margin: 0px 0px 55px 0px;
+}
+
+.search form {
+  background-color: rgb(255, 255, 255);
+  height: 396px;
+  width: 669px;
+  padding: 56px;
+  margin: auto;
 }
 
 .button {
@@ -247,7 +328,9 @@ list-style: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
   vertical-align: middle;
-  line-height: 1.2;
+  line-height: 26px;
+  padding: 17px 195px 20px 195px;
+  text-transform: uppercase;
 
   background-color: rgb(129, 179, 210);
   border: none;
@@ -260,6 +343,7 @@ list-style: none;
   background-color: rgb(84, 150, 189);
 }
 
+
 /*подвал*/
 .main-footer {
   color: rgb(0, 0, 0);
@@ -270,17 +354,38 @@ list-style: none;
   font-size: 21px;
   font-weight: bold;
 }
-
 .footer-social {
   text-align: center;
 }
 
 .footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+
   list-style: none;
 }
 
 .social-button {
-  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 48px;
+
+  background-color: rgb(129, 179, 210);
+ }
+
+.social-button:hover,
+.social-button:focus {
+  background-color: rgb(102, 158, 192);
+}
+.social-button:active{
+  background-color: rgb(84, 150, 189);
 }
 
 .footer-copyright {
@@ -289,6 +394,34 @@ list-style: none;
 .footer-copyright a {
   color: rgb(0, 0, 0);
 }
+/* подвал */
+
+.main-footer {
+  padding: 35px 0;
+
+}
+.main-footer .container {
+  display: flex;
+}
+.hashtag {
+  margin: 0;
+  width: 155px;
+  margin-right: 255px;
+}
+
+.footer-social {
+  margin: 0;
+  width: 165px;
+}
+
+.footer-copyright {
+  width: 200px;
+  margin: 0;
+  margin-left: auto;
+}
+
+
+
 
 
 /*стр. каталог блок фильтры*/
@@ -483,47 +616,4 @@ body {
  background-color: transparent;
 }
 
-*/
-
-/* ----- подвал -----
-.map {
-  /* временно для сетки
-  background-color:#ef5ea6;
-}
-.main-footer {
-  padding: 35px 0;
-  /* временно для сетки
-  background-color:#cd7de8;
-  min-height: 120px;
-}
-.main-footer .container {
-  display: flex;
-}
-.hashtag {
-  margin: 0;
-  width: 155px;
-  margin-right: 255px;
-
-/* Временно для сетки
-min-height: 70px;
-}
-
-.footer-social {
-  margin: 0;
-  width: 165px;
-
-/* Временно для сетки
-background-color:#cd7de8;
-min-height: 70px;
-}
-
-.footer-copyright {
-  width: 200px;
-  margin: 0;
-  margin-left: auto;
-
-/* Временно для сетки
-background-color:#cd7de8;
-min-height: 70px;
-}
 */
