@@ -81,7 +81,7 @@ a {
 }
 .background-blue h3 {
   font-size: 21px;
-  line-height: 21px; /*1*/
+  line-height: 26px; /*1*/
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
@@ -95,15 +95,14 @@ a {
 .background-blue {
   width: 400px;
   margin: 0px;
-  padding: 47px 59px 63px 60px;
-
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
+  padding: 45px 59px 65px 59px;
 }
 
 .background-blue h3 {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  /*width: 123px;
+  height: 44px;
+padding: 0px 80px 27px 80px;*/
 }
 
 .background-blue p {
@@ -119,8 +118,9 @@ a {
 }
 .reason-1 {
   display: flex;
-  justify-content: space-between;
+
 }
+
 
 
 /*блок жилье еда сувениры*/
@@ -139,10 +139,9 @@ a {
   color: rgb(0, 0, 0);
 }
 
-.reason-1-wrapper {
+.reason-list {
 display: flex;
 flex-direction: row;
-justify-content: space-between;
 margin: 0;
 padding: 0;
 
