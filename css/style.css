@@ -130,7 +130,6 @@ li:nth-child(4) {
   background-repeat: no-repeat;
   text-align: center;
   padding-top: 77px;
-  padding-bottom: 80px;
 }
 
 
@@ -242,25 +241,28 @@ list-style: none;
 }
 .reason-list li {
   text-align: center;
-
   width: 400px;
-  min-height: 330px;
-  margin: 0px;
+    margin: 0px;
 }
 .reason-item-1 {
-  padding: 59px 74px 15px 74px; /*59px 74px 88px 74px*/
+  padding: 59px 74px 15px 74px;
+  min-height: 330px;
 }
 .reason-item-2 {
-  padding: 61px 58px 15px 55px; /*61px 58px 88px 55px*/
+  padding: 61px 58px 15px 55px;
+  min-height: 330px;
 }
 .reason-item-3 {
-  padding: 56px 60px 15px 60px;/*56px 60px 88px 60px*/
+  padding: 56px 60px 15px 60px;
+  min-height: 330px;
 }
 .reason-item-4 {
-  padding: 48px 96px 15px 96px;/*48px 96px 63px 96px*/
+  padding: 48px 96px 15px 96px;
+  min-height: 256px;
 }
 .reason-item-5 {
-  padding: 48px 68px 15px 68px;/*48px 68px 88px 68px*/
+  padding: 48px 68px 15px 68px;
+  min-height: 256px;
 }
 .reason-item-1 h3,
 .reason-item-2 h3,
@@ -275,27 +277,32 @@ list-style: none;
   padding: 0px 83px 20px 83px;
 }
 .reason-item-6 {
-  padding: 48px 70px 15px 70px; /*48px 70px 88px 70px*/
+  padding: 48px 70px 15px 70px;
+  min-height: 256px;
 }
 
 /*блок причины 3, 4, 5*/
 .background-gray {
   background-color: rgb(238, 238, 238);
+
 }
 
 /*блок поиск*/
 .search {
   text-align: center;
+  min-height: 292px;
 }
 .search h2 {
   font-size: 30px;
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 1.2;
-  margin-top: 55;
-  margin-bottom: 30px;
+  margin: 0;
+  padding-top: 55px;
 }
-
+.search p {
+  padding-bottom: 25px;
+}
 .search a {
   font-size: 21px;
   color: rgb(255, 255, 255);
@@ -305,7 +312,7 @@ list-style: none;
   background-color: rgb(118, 99, 87);
   border: none;
   padding: 30px 135px 30px 135px;
-
+  margin: 0;
 }
 .search a:hover {
   background-color: rgb(96, 78, 67);
@@ -337,10 +344,20 @@ list-style: none;
   width: 347px;
   padding: 14px 215px 14px 12px;
 
-  background-image: url("../img/calendar.svg");
+  /*background-image: url("../img/calendar.svg");*/
   background-position: 316px center;
   background-repeat: no-repeat;
 }
+.search-data {
+  position: relative;
+}
+.calendar {
+  position: absolute;
+  top: 0px;
+  left: 400px;
+}
+
+
 .search-data input[type="text"]:hover{
   background-color: rgb(235, 235, 235);
 }
@@ -400,8 +417,8 @@ list-style: none;
 /*подвал*/
 .main-footer {
   color: rgb(0, 0, 0);
-  padding: 35px 100px 35px 130px;
-  min-height: 120px; 
+  padding: 0px 100px 0px 130px;
+  min-height: 120px;
 }
 .main-footer .container {
   display: flex;
@@ -429,7 +446,7 @@ list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 150px;
+  width: 155px;
   margin: 0 auto;
   padding: 0;
 
@@ -645,7 +662,7 @@ list-style: none;
 /* фильтр результат */
 .result {
   display: flex;
-  height: 88px;
+  /*min-height: 88px;*/
   padding: 30px 73px 34px 73px;
 }
 .sorting {
@@ -654,13 +671,13 @@ list-style: none;
   line-height: 1.5;
 
   display: flex;
-  width: 245px;
   justify-content:space-between;
-  margin: 0;
+  width: 450px;
   padding-top: 10px;
-
   padding-bottom: 5px;
+  margin: 0;
 
+  background: #d9a3d4;
 }
 .result h2 {
   font-size: 21px;
@@ -673,27 +690,21 @@ list-style: none;
   color: rgb(0, 0, 0);
   line-height: 1.5;
   margin: 0;
-  padding: 10px 35px 5px 50px;
-}
-/*
-.icon-wrapper {
-  padding: 10px 0px 5px 154px;
+  padding: 8px 0px 5px 50px;
 }
 
-.icon-wrapper-down {
-  padding: 10px 0px 5px 12px;
+.icon-wrapper {
+  margin-left: auto;
 }
 .icon-wrapper-up {
-  padding: 10px auto 5px px;
+  padding-right: 12px;
 }
-*/
 .icon-wrapper-up path {
   fill: rgb(202, 202, 202);
 }
 .icon-wrapper-down path {
   fill: rgb(129, 179, 210);
 }
-
 .icon-wrapper-up :hover path,
 .icon-wrapper-down :hover path {
   fill: rgb(0, 0, 0);
@@ -703,11 +714,21 @@ list-style: none;
   fill: rgb(129, 179, 210);
 }
 
-.hotel-info {
+.hotel {
   display: flex;
-
   min-height: 150px;
   margin: 20px 73px;
+}
+.hotel-photo {
+  order: -1;
+}
+
+.hotel-info {
+  display: flex;
+  justify-content: space-around;
+
+  background: #d9a3d4;
+
 
 }
 .hotel-wrapper {
@@ -736,12 +757,12 @@ list-style: none;
 .sorting-type-rating {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.302);
-  border-bottom: 0.8px dashed rgb(129, 179, 210);
+  border-bottom: 0.8px dotted rgb(129, 179, 210);
 }
 .sorting-type-rating:hover {
   text-decoration: none;
   color: rgb(129, 179, 210);
-  border-bottom: 0.8px dashed rgb(129, 179, 210);
+  border-bottom: 0.8px dotted rgb(129, 179, 210);
 }
 .sorting-type-rating:active {
   color: rgb(0, 0, 0);
@@ -806,6 +827,7 @@ list-style: none;
   display: flex;
   flex-direction:column;
   align-items: flex-end;
+  margin-left: auto;
 }
 .star {
   padding-bottom: 33px;
@@ -814,6 +836,12 @@ list-style: none;
 .housing-type {
   padding-bottom: 10px;
 }
-.hotel-photo {
-  order: -1;
+
+.map p {
+  background-color: rgb(203, 221, 169);
+  background-image: url("../img/map.jpg");
+  width: 100%;
+  min-height: 475px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
