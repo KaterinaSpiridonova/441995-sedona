@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", Arial, sans-serif; /*гарнитура (название шрифта)*/
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
@@ -77,39 +77,53 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+/*
 .main-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  padding: 20px 70px 20px 70px;
-}
-
+  padding: 0px 72px 0px 72px;
+}*/
 .site-navigation {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 
   width: 1200px;
+  min-height: 56px;
 
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 .site-navigation li {
   width: 20%;
 }
+li:nth-child(1),
+li:nth-child(2) {
+  text-align: left;
+  padding-left: 72px;
+}
+li:nth-child(2) {
+  margin-right: auto;
+}
+li:nth-child(3),
+li:nth-child(4) {
+    text-align: right;
+    padding-right: 72px;
+}
 
+.main-header {
+  position: relative;
+}
 .main-header-logo {
   width: 138px;
   height: 70px;
   position: absolute;
+  top: 0px;
+  left: 530px;
 }
 
 /*блок промо*/
 .promo {
+  min-height: 509px;
   background-color: rgb(105, 135, 165);
   background-image: url("../img/promo-mask.png"), url("../img/promo-background.jpg");
   background-position: left bottom, 50% 22%;
@@ -123,7 +137,7 @@ body {
 /*блок вступление*/
 .ad {
   text-align: center;
-  height: 216px;
+  min-height: 215px;
 }
 
 .ad h2{
@@ -133,14 +147,15 @@ body {
 
   margin-top: 0px;
   margin-right: auto;
-  margin-bottom: 34px;
+  margin-bottom: 0px; /*margin-bottom: 35px;*/
   margin-left: auto;
 
-  padding: 60px 380px 38px 380px;
-  position: relative;
+  padding: 55px 380px 25px 380px;
 }
+
 .ad p {
-  margin: -35px;
+  margin: 0px;
+  padding-bottom: 55px;
 }
 
 /*блок причины №1, 2*/
@@ -165,13 +180,15 @@ body {
 
 .background-blue {
   width: 400px;
+  min-height: 256px;
   margin: 0px;
-  padding: 45px 59px 65px 59px;
+  padding: 45px 59px 15px 59px; /*padding: 45px 59px 65px 59px;*/
 }
 .background-blue-2 {
+  min-height: 256px;
   width: 400px;
   margin: 0px;
-  padding: 49px 49px 65px 49px;
+  padding: 49px 49px 15px 49px; /*49px 49px 65px 49px;*/
 }
 .background-blue h3 {
   margin: 0 auto;
@@ -188,21 +205,21 @@ body {
 .reason-image-town {
   background-image: url("../img/reason-real-town.jpg");
   width: 800px;
-  height: 257px;
+  min-height: 256px;
   background-position: 50% 55%;
 }
 
 .reason-image-bridge {
   background-image: url("../img/reason-devil-ridge.jpg");
   width: 800px;
-  height: 257px;
+  min-height: 256px;
   background-position: 50% 55%;
   order: -1;
 }
 
 .reason {
   display: flex;
-  height: 257px;
+  min-height: 256px;
   flex-direction: row;
 }
 
@@ -227,23 +244,23 @@ list-style: none;
   text-align: center;
 
   width: 400px;
-  height:331px;
+  min-height: 330px;
   margin: 0px;
 }
 .reason-item-1 {
-  padding: 59px 74px 88px 74px;
+  padding: 59px 74px 15px 74px; /*59px 74px 88px 74px*/
 }
 .reason-item-2 {
-  padding: 61px 58px 88px 55px;
+  padding: 61px 58px 15px 55px; /*61px 58px 88px 55px*/
 }
 .reason-item-3 {
-  padding: 56px 60px 88px 60px;
+  padding: 56px 60px 15px 60px;/*56px 60px 88px 60px*/
 }
 .reason-item-4 {
-  padding: 48px 96px 63px 96px;
+  padding: 48px 96px 15px 96px;/*48px 96px 63px 96px*/
 }
 .reason-item-5 {
-  padding: 48px 68px 88px 68px;
+  padding: 48px 68px 15px 68px;/*48px 68px 88px 68px*/
 }
 .reason-item-1 h3,
 .reason-item-2 h3,
@@ -251,14 +268,14 @@ list-style: none;
   padding-top: 20px;
 }
 .reason-item-4 h3 {
-  padding-bottom: 20px;
+  padding: 0px 45px 20px 45px;
 }
 .reason-item-5 h3,
 .reason-item-6 h3  {
   padding: 0px 83px 20px 83px;
 }
 .reason-item-6 {
-  padding: 48px 70px 88px 70px;
+  padding: 48px 70px 15px 70px; /*48px 70px 88px 70px*/
 }
 
 /*блок причины 3, 4, 5*/
@@ -384,7 +401,7 @@ list-style: none;
 .main-footer {
   color: rgb(0, 0, 0);
   padding: 35px 100px 35px 130px;
-  height: 120px; /* уточнить */
+  min-height: 120px; 
 }
 .main-footer .container {
   display: flex;
@@ -480,7 +497,7 @@ list-style: none;
 
   background-color: rgb(105, 135, 165);
   background-image: url("../img/filters-background.jpg");
-  height: 217px;
+  min-height: 217px;
   background-position: 0% 10%;
   background-repeat: no-repeat;
 }
@@ -641,9 +658,9 @@ list-style: none;
   justify-content:space-between;
   margin: 0;
   padding-top: 10px;
-  padding-right: ;
+
   padding-bottom: 5px;
-  padding-left: auto;
+
 }
 .result h2 {
   font-size: 21px;
