@@ -290,7 +290,6 @@ list-style: none;
 /*блок поиск*/
 .search {
   text-align: center;
-  min-height: 292px;
 }
 .search h2 {
   font-size: 30px;
@@ -298,10 +297,12 @@ list-style: none;
   font-weight: bold;
   line-height: 1.2;
   margin: 0;
-  padding-top: 55px;
-}
-.search p {
+  padding-top: 50px;
   padding-bottom: 25px;
+}
+.search-manual {
+  margin: 0;
+  padding-bottom: 70px;
 }
 .search a {
   font-size: 21px;
@@ -311,8 +312,11 @@ list-style: none;
 
   background-color: rgb(118, 99, 87);
   border: none;
-  padding: 30px 135px 30px 135px;
+  padding: 30px 139px 30px 138px;
   margin: 0;
+  /*
+  position: relative;
+  z-index: 1;*/
 }
 .search a:hover {
   background-color: rgb(96, 78, 67);
@@ -321,14 +325,13 @@ list-style: none;
   color: rgba(255, 255, 255, 0.302);
   background-color: rgb(80, 62, 51);
 }
-.search-manual {
-  margin-bottom: 50px;
-}
+
 .search label{
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
   padding-right: 20px;
+  margin-right: auto;
 }
 
 .search-data input[type="text"] {
@@ -341,20 +344,26 @@ list-style: none;
   border: none;
 
   box-sizing: border-box;
-  width: 347px;
-  padding: 14px 215px 14px 12px;
+  min-width: 340px;
+  padding: 6px 50px 6px 12px;
+  margin: 0;
 
-  /*background-image: url("../img/calendar.svg");*/
   background-position: 316px center;
   background-repeat: no-repeat;
 }
 .search-data {
   position: relative;
+  margin: 0;
+  padding-bottom: 30px;
+
 }
 .calendar {
   position: absolute;
-  top: 0px;
-  left: 400px;
+  top: 5px;
+  left: 425px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 
@@ -366,7 +375,9 @@ list-style: none;
   border: 2px solid rgb(229, 229, 229);
   outline: none;
 }
-
+.search-people-number {
+  margin: 0;
+}
 .search-people-number input[type="text"],
 .quantity-children input[type="text"] {
   color: rgb(0, 0, 0);
@@ -379,18 +390,28 @@ list-style: none;
   outline: none;
 
   width: 38px;
+  height: 38px;
   text-align: center;
   padding: 14px 15px 14px 15px;
-  /*padding: 14px 25px 14px 25px;*/
-  margin: 0px 0px 55px 0px;
+  margin-bottom: 55px;
 }
-
-.search form {
-  background-color: rgb(255, 255, 255);
-  height: 396px;
-  width: 669px;
-  padding: 56px;
+.form {
+  min-height: 395px;
+  width: 567px;
+  padding: 85px 55px 55px 55px;
   margin: auto;
+
+  background-color: #cbdda9;
+  position: absolute;
+  top: 0;
+
+}
+.button-quantity {
+  height: 38px;
+  width: 38px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .button {
@@ -399,7 +420,8 @@ list-style: none;
   font-weight: bold;
   vertical-align: middle;
   line-height: 26px;
-  padding: 17px 195px 20px 195px;
+  padding: 17px 195px 17px 195px;
+
   text-transform: uppercase;
 
   background-color: rgb(129, 179, 210);
@@ -421,6 +443,10 @@ list-style: none;
   min-height: 120px;
 
   margin-top: 35px;
+/*
+  position: relative;
+  margin-top: 0px;
+  background-color: rgba(255, 255, 255, 0.8);*/
 }
 .main-footer .container {
   display: flex;
@@ -590,11 +616,11 @@ list-style: none;
 }
 .infrastructure input[type=checkbox]:disabled + label::before,
 .housing input[type=checkbox]:disabled + label::before {
-  background-image: url("../img/checkbox-on-grau.svg");
+  background-image: url("../img/checkbox-off-gray.svg");
 }
 .infrastructure input[type=checkbox]:checked:disabled + label::before,
 .housing input[type=checkbox]:checked:disabled + label::before {
-  background-image: url("../img/checkbox-off-grau.svg");
+  background-image: url("../img/checkbox-on-gray.svg");
 }
 
 /*второй вариант
@@ -908,7 +934,9 @@ list-style: none;
   background-color: rgb(203, 221, 169);
   background-image: url("../img/map.jpg");
   width: 100%;
-  min-height: 475px;
+  min-height: 593px; /*475px*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
+
+  position: relative;
 }

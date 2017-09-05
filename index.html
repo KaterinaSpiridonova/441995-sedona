@@ -101,41 +101,52 @@
           <h2>Заинтересовались?</h2>
           <p class="search-manual">УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ,<br>И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
           <a href=#>Поиск гостиницы в Седоне</a>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <p class="search-data">
-              <label for="user-date-arrival">Дата заезда:</label>
-              <button class="calendar" type="button">
-                <img src="img/calendar.svg" width="25" height="25" alt="Календарь">
-                Календарь</button>
-              <input type="text" name="date-arrival" id="user-date-arrival" value="24 апреля 2017">
-
-            </p>
-            <p class="search-data">
-              <label for="user-date-departure">Дата выезда:</label>
-              <input type="text" name="date-departure" id="user-date-departure" value="4 июля 2017">
-              <button class="calendar" type="button">Календарь</button>
-            </p>
-
-            <p class="search-people-number">
-              <label for="quantity-adults">Взрослые:</label>
-              <button class="button-quantity" type="button">Меньше</button>
-              <input type="text" name="quantity" id="quantity-adults" value="2">
-              <button class="button-quantity" type="button">Больше</button>
-
-              <label for="quantity-children">Дети:</label>
-              <button class="button-quantity" type="button">Меньше</button>
-              <input type="text" name="quantity" id="quantity-children" value="0">
-              <button class="button-quantity" type="button">Больше</button>
-            </p>
-
-            <button class="button" type="submit">Найти</button>
-
-          </form>
         </section>
 
         <section class="map">
           <h2 class="visually-hidden">Седона на карте</h2>
           <p></p>
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="search-data">
+              <label for="user-date-arrival">Дата заезда:</label>
+              <button class="calendar" type="button">
+                <img src="img/calendar.svg" width="25" height="25" alt="Календарь">
+                <span class="visually-hidden">Календарь</span>
+              </button>
+              <input type="text" name="date-arrival" id="user-date-arrival" value="24 апреля 2017">
+            </p>
+            <p class="search-data">
+              <label for="user-date-departure">Дата выезда:</label>
+              <input type="text" name="date-departure" id="user-date-departure" value="4 июля 2017">
+              <button class="calendar" type="button">
+                <img src="img/calendar.svg" width="25" height="25" alt="Календарь">
+                <span class="visually-hidden">Календарь</span>
+              </button>
+            </p>
+
+            <p class="search-people-number">
+              <label for="quantity-adults">Взрослые:</label>
+              <button class="button-quantity" type="button">-
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <input type="text" name="quantity" id="quantity-adults" value="2">
+              <button class="button-quantity" type="button">+
+                <span class="visually-hidden">Больше</span>
+              </button>
+
+              <label for="quantity-children">Дети:</label>
+              <button class="button-quantity" type="button">-
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <input type="text" name="quantity" id="quantity-children" value="0">
+              <button class="button-quantity" type="button">+
+                <span class="visually-hidden">Больше</span>
+              </button>
+            </p>
+
+            <button class="button" type="submit">Найти</button>
+
+          </form>
         </section>
 
       </main>
@@ -178,4 +189,4 @@
       </footer>
     </div>
   </body>
-</html>
+  </html>
