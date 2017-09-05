@@ -588,12 +588,19 @@ list-style: none;
 .infrastructure {
   padding-right: 55px;
 }
-/*
-ПЕРЕДЕЛАТЬ
-.infrastructure-housing input[type=checkbox]:checked + label::before :disabled {
-  color: rgb(55, 55, 55);
-}*/
+.infrastructure input[type=checkbox]:disabled + label::before,
+.housing input[type=checkbox]:disabled + label::before {
+  background-image: url("../img/checkbox-on-grau.svg");
+}
+.infrastructure input[type=checkbox]:checked:disabled + label::before,
+.housing input[type=checkbox]:checked:disabled + label::before {
+  background-image: url("../img/checkbox-off-grau.svg");
+}
 
+/*второй вариант
+.filter-checkbox:disabled + label {
+  opacity: 0.5;
+} */
 /* стоимость в сутки */
  .range-filter {
  width: 318px;
