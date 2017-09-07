@@ -351,14 +351,23 @@ list-style: none;
   text-transform: uppercase;
 
   background-color: rgb(242, 242, 242);
-  border: none;
 
-  /*box-sizing: border-box;
-  max-width: 346px;*/
-  padding: 6px 143px 6px 12px;
+  width: 345px;
+  padding: 4px 50px 4px 10px;
+  border: 2px solid rgb(242, 242, 242);
 
-/*  background-position: 316px center;
+/* box-sizing: border-box;
+  background-position: 316px center;
   background-repeat: no-repeat;*/
+}
+
+.search-data input[type="text"]:hover{
+  background-color: rgb(235, 235, 235);
+  border-color: rgb(235, 235, 235);
+}
+.search-data input[type="text"]:focus{
+  background-color: transparent;
+  outline: none;
 }
 .calendar {
   position: absolute;
@@ -368,7 +377,7 @@ list-style: none;
   margin: 0;
   border: 0;
   outline: none;
-  background: rgb(242, 242, 242);
+  background-color: transparent;
 }
 .calendar:hover path {
   fill: rgb(0, 0, 0);
@@ -382,43 +391,21 @@ list-style: none;
   padding-bottom: 30px;
   min-width: 459px;
 }
-.search-data input[type="text"]:hover{
-  background-color: rgb(235, 235, 235);
-}
-.search-data input[type="text"]:focus{
-  background-color: transparent;
-  border: 2px solid rgb(229, 229, 229);
-  outline: none;
-}
 
-/* кнопка найти*/
-.button {
-  font-size: 21px;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  vertical-align: middle;
-  line-height: 26px;
-  padding: 17px 192px 17px 192px;
-
-  text-transform: uppercase;
-
-  background-color: rgb(129, 179, 210);
-  border: none;
-}
-.button:hover{
-  background-color: rgb(102, 158, 192);
-}
-.button:active{
-  color: rgba(255, 255, 255, 0.302);
-  background-color: rgb(84, 150, 189);
-}
 /*блок взрослые дети */
 .search-people-number {
   margin: 0;
+  color: rgb(0, 0, 0);
+  line-height: 1.857;
+  font-weight: bold;
 }
-
+/*
+.search-people-number label {
+  display: inline-block;
+  width: 113px;
+}
 .search-people-number-wrapper {
-/*  background-color: rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
   min-width: 114px;
   min-height: 38px;
 */
@@ -433,12 +420,14 @@ list-style: none;
 
   border: none;
   outline: none;
-
+  
   width: 38px;
   height: 38px;
   text-align: center;
   padding: 14px 15px 14px 15px;
   margin-bottom: 55px;
+
+  background-color: rgb(242, 242, 242);
 }
 
 .button-quantity {
@@ -464,6 +453,27 @@ list-style: none;
   transform: translate(-50%, -50%);
 }
 
+/* кнопка найти*/
+.button {
+  font-size: 21px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 26px;
+  padding: 17px 192px 17px 192px;
+
+  text-transform: uppercase;
+
+  background-color: rgb(129, 179, 210);
+  border: none;
+}
+.button:hover{
+  background-color: rgb(102, 158, 192);
+}
+.button:active{
+  color: rgba(255, 255, 255, 0.302);
+  background-color: rgb(84, 150, 189);
+}
 
 /*подвал*/
 .main-footer,
