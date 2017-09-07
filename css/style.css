@@ -19,7 +19,7 @@ body {
   color: rgb(51, 51, 51);
   text-transform: uppercase;
 
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(242, 242, 242);
 }
 
 img {
@@ -76,6 +76,8 @@ body {
 .main-container {
   width: 1200px;
   margin: 0 auto;
+
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
 }
 /*
 .main-navigation {
@@ -134,12 +136,13 @@ body {
 
 
 /*блок вступление*/
-.ad {
+.advertising {
   text-align: center;
   min-height: 215px;
+  background-color: rgb(255, 255, 255);
 }
 
-.ad h2{
+.advertising h2{
   font-size: 21px;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -149,12 +152,12 @@ body {
   margin-bottom: 0px; /*margin-bottom: 35px;*/
   margin-left: auto;
 
-  padding: 55px 380px 25px 380px;
+  padding: 59px 380px 27px 380px;
 }
 
-.ad p {
+.advertising p {
   margin: 0px;
-  padding-bottom: 55px;
+  padding-bottom: 50px;
 }
 
 /*блок причины №1, 2*/
@@ -166,7 +169,7 @@ body {
 .background-blue h3,
 .background-blue-2 h3{
   font-size: 21px;
-  line-height: 26px; /*1*/
+  line-height: 24px;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
@@ -181,13 +184,13 @@ body {
   width: 400px;
   min-height: 256px;
   margin: 0px;
-  padding: 45px 59px 15px 59px; /*padding: 45px 59px 65px 59px;*/
+  padding: 45px 59px 15px 59px;
 }
 .background-blue-2 {
   min-height: 256px;
   width: 400px;
   margin: 0px;
-  padding: 49px 49px 15px 49px; /*49px 49px 65px 49px;*/
+  padding: 49px 49px 15px 49px;
 }
 .background-blue h3 {
   margin: 0 auto;
@@ -195,7 +198,11 @@ body {
 }
 .background-blue-2 h3{
   margin: 0 auto;
-  padding: 0px 75px 20px 75px;
+  padding: 0px 77px 15px 77px;
+}
+.background-blue p,
+ .background-blue-2 p {
+  line-height: 23px;
 }
 .background-blue p {
   margin-bottom: 25px;
@@ -223,6 +230,9 @@ body {
 }
 
 /*блок жилье еда сувениры*/
+.reason-detailed {
+  background-color: rgb(255, 255, 255);
+}
 .reason-list {
 display: flex;
 flex-direction: row;
@@ -267,7 +277,13 @@ list-style: none;
 .reason-item-1 h3,
 .reason-item-2 h3,
 .reason-item-3 h3 {
-  padding-top: 20px;
+  padding-top: 21px;
+  padding-bottom: 10px;
+}
+.reason-item-1 p,
+.reason-item-2 p,
+.reason-item-3 p {
+  line-height: 21px;
 }
 .reason-item-4 h3 {
   padding: 0px 45px 20px 45px;
@@ -290,6 +306,7 @@ list-style: none;
 /*блок поиск*/
 .search {
   text-align: center;
+  background-color: rgb(255, 255, 255);
 }
 .search h2 {
   font-size: 30px;
@@ -401,35 +418,13 @@ list-style: none;
 
   margin-bottom: 54px;
 }
-/*
-.search-people-number-1,
-.search-people-number-2 {
-  display: inline-block;
-  width: 113px;
-
-}
-.search-people-number-1 {
-  width: 113px;
-}
-.search-people-number-2 {
-  width: 65px;
-  margin-left: 26px;
+.search-people-number {
+  display: flex;
 }
 
-
-.search-people-number-wrapper {
-/*  background-color: rgb(242, 242, 242);
-  min-width: 114px;
-  min-height: 38px;*/
-
-}
-.search-people-number-wrapper-1 label {
-  margin-right: auto;
-  padding-left: 40px;
-}
 .search-people-number-wrapper-1,
 .search-people-number-wrapper-2 {
-  width: 227px;
+  width: 50%;
   display: flex;
   align-items:center;
 
@@ -439,8 +434,12 @@ list-style: none;
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
-}
 
+  margin-right: auto;
+}
+.search-people-number-wrapper-2 label{
+  margin-left: 54px;
+}
 .search-people-number-wrapper-1 input[type="text"],
 .search-people-number-wrapper-2 input[type="text"] {
   color: rgb(0, 0, 0);
@@ -459,7 +458,8 @@ list-style: none;
   background-color: rgb(242, 242, 242);
 }
 
-.button-quantity {
+.button-quantity1,
+.button-quantity2 {
   height: 38px;
   width: 38px;
   padding: 0;
@@ -467,19 +467,38 @@ list-style: none;
   border: 0;
 
   position: relative;
+  background-color: rgb(242, 242, 242);
 }
 
-.button-quantity::before {
+.button-quantity1::before,
+.button-quantity2::before {
   content: "";
   position: absolute;
-/*  top: ;
-  left: ;*/
-
-  width: 12px;
+  width: 11px;
   height: 3px;
-
   background: rgb(0, 0, 0);
   transform: translate(-50%, -50%);
+  background-color: rgb(169, 169, 169);
+}
+.button-quantity2::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: translate(-50%, -50%) rotate(90deg);
+    background-color: rgb(169, 169, 169);
+}
+
+.button-quantity1:hover::before,
+.button-quantity2:hover::before,
+.button-quantity2:hover::after {
+    background-color: rgb(0, 0, 0);
+}
+.button-quantity1:active::before,
+.button-quantity2:active::before,
+.button-quantity2:active::after {
+    background-color: rgb(129, 179, 210);
 }
 
 /* кнопка найти*/
@@ -512,6 +531,7 @@ list-style: none;
   color: rgb(0, 0, 0);
   padding: 35px 102px 0px 130px;
   min-height: 120px;
+  background-color: rgb(255, 255, 255);
 }
 .main-footer-index {
   position: relative;
@@ -793,12 +813,15 @@ list-style: none;
 .range-toggle-min {
   left: 0;
 }
-
 .range-toggle-max {
   left: 80%;
 }
 .range-toggle:hover {
   background: #1c4f80;
+}
+.range-toggle:hover {
+  width: 7px;
+  height: 7px;
 }
 .filter-button {
   display: block;
@@ -822,6 +845,7 @@ list-style: none;
 
 /* фильтр результат */
 .result {
+  background-color: rgb(255, 255, 255);
   display: flex;
   padding: 30px 73px 28px 73px;
 
@@ -874,7 +898,9 @@ list-style: none;
 .icon-wrapper-down:active path {
   fill: rgb(129, 179, 210);
 }
-
+.hotel-directory {
+  background-color: rgb(255, 255, 255);
+}
 .hotel {
   display: flex;
   min-height: 150px;
