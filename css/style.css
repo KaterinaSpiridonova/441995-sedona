@@ -314,9 +314,6 @@ list-style: none;
   border: none;
   padding: 30px 139px 30px 138px;
   margin: 0;
-  /*
-  position: relative;
-  z-index: 1;*/
 }
 .search a:hover {
   background-color: rgb(96, 78, 67);
@@ -326,12 +323,24 @@ list-style: none;
   background-color: rgb(80, 62, 51);
 }
 
-.search label{
+/*блок поиск форма*/
+.form {
+  min-height: 395px;
+  width: 567px;
+  padding: 55px 55px 55px 55px;
+  margin: auto;
+
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 315px;
+}
+
+.search-data label {
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
   padding-right: 20px;
-  margin-right: auto;
 }
 
 .search-data input[type="text"] {
@@ -343,30 +352,49 @@ list-style: none;
   background-color: rgb(242, 242, 242);
   border: none;
 
-  box-sizing: border-box;
-  min-width: 340px;
-  padding: 6px 50px 6px 12px;
-  margin: 0;
+  /*box-sizing: border-box;*/
+  width: 346px;
+  padding: 6px 6px 6px 12px;
 
-  background-position: 316px center;
+/*  background-position: 316px center;
   background-repeat: no-repeat;
-}
-.search-data {
-  position: relative;
-  margin: 0;
-  padding-bottom: 30px;
 
+  position: relative;*/
 }
 .calendar {
-  position: absolute;
+  /*position: absolute;
   top: 5px;
-  left: 425px;
+  right: 30px;*/
   padding: 0;
   margin: 0;
   border: 0;
+  position: relative;
+
+}
+.calendar::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 10px;
+
+  width: 21px;
+  height: 23px;
+
+  padding: 0;
+  border: none;
+
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 
+.search-data {
+
+  margin: 0;
+  padding-bottom: 30px;
+  width: 459px;
+}
 .search-data input[type="text"]:hover{
   background-color: rgb(235, 235, 235);
 }
@@ -375,52 +403,15 @@ list-style: none;
   border: 2px solid rgb(229, 229, 229);
   outline: none;
 }
-.search-people-number {
-  margin: 0;
-}
-.search-people-number input[type="text"],
-.quantity-children input[type="text"] {
-  color: rgb(0, 0, 0);
-  line-height: 1.857;
-  font-weight: bold;
-  text-transform: uppercase;
 
-  background-color: rgb(242, 242, 242);
-  border: none;
-  outline: none;
-
-  width: 38px;
-  height: 38px;
-  text-align: center;
-  padding: 14px 15px 14px 15px;
-  margin-bottom: 55px;
-}
-.form {
-  min-height: 395px;
-  width: 567px;
-  padding: 85px 55px 55px 55px;
-  margin: auto;
-
-  background-color: #cbdda9;
-  position: absolute;
-  top: 0;
-
-}
-.button-quantity {
-  height: 38px;
-  width: 38px;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
+/* кнопка найти*/
 .button {
   font-size: 21px;
   color: rgb(255, 255, 255);
   font-weight: bold;
   vertical-align: middle;
   line-height: 26px;
-  padding: 17px 195px 17px 195px;
+  padding: 17px 192px 17px 192px;
 
   text-transform: uppercase;
 
@@ -434,21 +425,75 @@ list-style: none;
   color: rgba(255, 255, 255, 0.302);
   background-color: rgb(84, 150, 189);
 }
+/*блок взрослые дети */
+.search-people-number {
+  margin: 0;
+}
+
+.search-people-number-wrapper {
+/*  background-color: rgb(242, 242, 242);
+  min-width: 114px;
+  min-height: 38px;
+*/
+}
+
+.search-people-number input[type="text"],
+.quantity-children input[type="text"] {
+  color: rgb(0, 0, 0);
+  line-height: 1.857;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border: none;
+  outline: none;
+
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  padding: 14px 15px 14px 15px;
+  margin-bottom: 55px;
+}
+
+.button-quantity {
+  height: 38px;
+  width: 38px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  position: relative;
+}
+
+.button-quantity::before {
+  content: "";
+  position: absolute;
+/*  top: ;
+  left: ;*/
+
+  width: 12px;
+  height: 3px;
+
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+}
 
 
 /*подвал*/
-.main-footer {
+.main-footer,
+.main-footer-index {
   color: rgb(0, 0, 0);
-  padding: 0px 102px 0px 130px;
+  padding: 35px 102px 0px 130px;
   min-height: 120px;
-
-  margin-top: 35px;
-/*
-  position: relative;
-  margin-top: 0px;
-  background-color: rgba(255, 255, 255, 0.8);*/
 }
-.main-footer .container {
+.main-footer-index {
+  position: relative;
+
+  margin-top: -118px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.main-footer .container,
+.main-footer-index .container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -930,13 +975,14 @@ list-style: none;
   padding-bottom: 15px;
 }
 
-.map p {
+.map {
   background-color: rgb(203, 221, 169);
   background-image: url("../img/map.jpg");
   width: 100%;
-  min-height: 593px; /*475px*/
+  min-height: 590px; /*475px*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
 
   position: relative;
+  margin-top: 30px;
 }
