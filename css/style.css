@@ -398,7 +398,10 @@ list-style: none;
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
+
+  margin-bottom: 54px;
 }
+/*
 .search-people-number-1,
 .search-people-number-2 {
   display: inline-block;
@@ -413,15 +416,33 @@ list-style: none;
   margin-left: 26px;
 }
 
-/*
+
 .search-people-number-wrapper {
-  background-color: rgb(242, 242, 242);
+/*  background-color: rgb(242, 242, 242);
   min-width: 114px;
-  min-height: 38px;
+  min-height: 38px;*/
 
-}*/
+}
+.search-people-number-wrapper-1 label {
+  margin-right: auto;
+  padding-left: 40px;
+}
+.search-people-number-wrapper-1,
+.search-people-number-wrapper-2 {
+  width: 227px;
+  display: flex;
+  align-items:center;
 
-.search-people-number input[type="text"] {
+}
+.search-people-number-wrapper-1 label,
+.search-people-number-wrapper-2 label{
+  color: rgb(0, 0, 0);
+  line-height: 1.857;
+  font-weight: bold;
+}
+
+.search-people-number-wrapper-1 input[type="text"],
+.search-people-number-wrapper-2 input[type="text"] {
   color: rgb(0, 0, 0);
   line-height: 1.857;
   font-weight: bold;
@@ -434,7 +455,6 @@ list-style: none;
   height: 38px;
   text-align: center;
   padding: 14px 15px 14px 15px;
-  margin-bottom: 54px;
 
   background-color: rgb(242, 242, 242);
 }
@@ -483,6 +503,8 @@ list-style: none;
   color: rgba(255, 255, 255, 0.302);
   background-color: rgb(84, 150, 189);
 }
+
+
 
 /*подвал*/
 .main-footer,
