@@ -1013,3 +1013,6 @@ a {
     background-repeat: no-repeat;
     position: relative;
 }
+.map-interactive {
+  border: none;
+}
