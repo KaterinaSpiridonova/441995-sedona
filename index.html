@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,14 +34,14 @@
         <img src="img/promo-text-group.png" alt="welcome">
       </div>
       <div class="advertising">
-        <h2>СЕДОНА — НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h2>
-        <p>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>
+        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
       <section class="reason">
         <div class="background-blue">
           <h3>Настоящий городок</h3>
           <span>— №1 —</span>
-          <p>СЕДОНА &mdash; НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+          <p>СЕДОНА &mdash; Не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="reason-image-town"></div>
       </section>
@@ -95,8 +95,8 @@
       </section>
       <section class="search">
         <h2>Заинтересовались?</h2>
-        <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ,
-          <br>И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
+        <p>укажите предполагаемые даты поездки,
+          <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="search-button" href="search.html">Поиск гостиницы в Седоне</a>
       </section>
       <section class="map">
@@ -176,7 +176,7 @@
           </ul>
         </div>
         <p class="footer-copyright">
-          <b>WEBSITE BY</b>
+          <b>website by</b>
           <a href="https://htmlacademy.ru/intensive/htmlcss">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="117" height="42" viewBox="0 0 108.08 36.85">
               <title>logo-htmlacademy-small1</title>
@@ -187,42 +187,5 @@
       </div>
     </footer>
   </div>
-
-  <script>
-    var link = document.querySelector(".search-button");
-
-    var popup = document.querySelector(".form");
-    var close = popup.querySelector(".search-button");
-
-    var form = popup.querySelector("form");
-    var login = popup.querySelector("[name=date-arrival]");
-    var password = popup.querySelector("[name=date-departure]");
-    var password = popup.querySelector("[name=quantity]");
-
-    var storage = localStorage.getItem("quantity");
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-    });
-
-    if (storage) {
-      quantity.value = storage;
-    }
-
-    close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    });
-
-    form.addEventListener("submit", function (evt) {
-      if (!date-arrival.value || !date-departure.value || !quantity.value) {
-        evt.preventDefault();
-        console.log("Нужно ввести данные");
-    } else {
-     localStorage.setItem("quantity", quantity.value);
-    }
-  });
-  </script>
 </body>
 </html>
