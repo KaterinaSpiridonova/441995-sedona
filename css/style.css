@@ -330,7 +330,7 @@ a {
     position: absolute;
     top: 0;
     left: 315px;
-}
+  }
 .search-data label {
     color: rgb(0, 0, 0);
     line-height: 1.857;
@@ -1015,4 +1015,16 @@ a {
 }
 .map-interactive {
   border: none;
+}
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
