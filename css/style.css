@@ -214,38 +214,58 @@ a {
 .reason-item-1 {
   padding: 59px 70px 15px 70px;
   min-height: 330px;
+  position: relative;
 }
-.reason-housing {
-  background-image: url("../img/icon-1.svg");
+.reason-item-1::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 162px;
   width: 75px;
   height: 72px;
-  margin: auto;
+  background-image: url("../img/icon-1.svg");
 }
 .reason-item-2 {
   padding: 61px 58px 15px 57px;
   min-height: 330px;
+  position: relative;
 }
-.reason-burger {
-  background-image: url("../img/icon-3.svg");
+.reason-item-2::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 158px;
   width: 74px;
   height: 70px;
-  margin: auto;
+  background-image: url("../img/icon-3.svg");
 }
 .reason-item-3 {
   padding: 56px 60px 15px 60px;
   min-height: 330px;
+  position: relative;
 }
-.reason-souvenirs {
-  background-image: url("../img/icon-2.svg");
+.reason-item-3::before {
+  content: "";
+  position: absolute;
+  top: 57px;
+  left: 167px;
   width: 64px;
   height: 76px;
-  margin: auto;
+  background-image: url("../img/icon-2.svg");
 }
 .reason-item-1 h3,
 .reason-item-2 h3,
 .reason-item-3 h3 {
-  padding-top: 31px;
   padding-bottom: 10px;
+}
+.reason-item-1 h3 {
+  padding-top: 102px;
+}
+.reason-item-2 h3 {
+  padding-top: 100px;
+}
+.reason-item-3 h3 {
+  padding-top: 105px;
 }
 .reason-item-4 {
   padding: 48px 95px 15px 95px;
@@ -662,6 +682,7 @@ a {
 .filter-option label {
   padding-left: 50px;
   position: relative;
+  cursor: pointer;
 }
 .filter-option label::before {
   content: "";
@@ -1021,4 +1042,15 @@ a {
 }
 .map-interactive {
   border: none;
+}
+.modal-show {
+  display: none;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
