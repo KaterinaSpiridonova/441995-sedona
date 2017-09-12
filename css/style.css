@@ -170,6 +170,8 @@ a {
   padding-top: 5px;
 }
 .reason-image-bridge {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
   order: -1;
 }
 .reason {
@@ -353,7 +355,7 @@ a {
   position: absolute;
   top: 0;
   left: 315px;
-
+  -webkit-animation: bounce 0.6s;
   animation: bounce 0.6s;
 }
 .search-data label {
@@ -1046,11 +1048,23 @@ a {
 .modal-show {
   display: none;
 }
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
+    -webkit-transform: translateY(1000px);
     transform: translateY(1000px);
   }
   100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
